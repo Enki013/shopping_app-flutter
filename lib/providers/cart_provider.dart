@@ -7,14 +7,14 @@ class CartProvider extends InheritedWidget {
   final Function(Product, Color) incrementQuantity;
   final Function(Product, Color) decrementQuantity;
 
-  CartProvider({
-    Key? key,
-    required Widget child,
+  const CartProvider({
+    super.key,
+    required super.child,
     required this.cartItems,
     required this.addToCart,
     required this.incrementQuantity,
     required this.decrementQuantity,
-  }) : super(key: key, child: child);
+  });
 
   static CartProvider? of(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<CartProvider>();

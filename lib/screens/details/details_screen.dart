@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:shop_app/constants.dart';
 import 'package:shop_app/models/Product.dart';
 import 'package:shop_app/providers/cart_provider.dart';
+import 'package:shop_app/providers/favorites_provider.dart';
 
 import 'components/color_dot.dart';
 
@@ -38,6 +39,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
   @override
   Widget build(BuildContext context) {
     final cartProvider = CartProvider.of(context);
+    final favoritesProvider = FavoritesProvider.of(context);
 
     return Scaffold(
       backgroundColor: widget.product.bgColor,
@@ -45,12 +47,25 @@ class _DetailsScreenState extends State<DetailsScreen> {
         leading: const BackButton(color: Colors.black),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              if (favoritesProvider != null) {
+                if (favoritesProvider.favoriteItems.contains(widget.product)) {
+                  favoritesProvider.removeFromFavorites(widget.product);
+                } else {
+                  favoritesProvider.addToFavorites(widget.product);
+                }
+              }
+            },
             icon: CircleAvatar(
               backgroundColor: Colors.white,
               child: SvgPicture.asset(
                 "assets/icons/Heart.svg",
                 height: 20,
+                color: favoritesProvider != null
+                    ? favoritesProvider.favoriteItems.contains(widget.product)
+                        ? Colors.red
+                        : Colors.black
+                    : Colors.black,
               ),
             ),
           )

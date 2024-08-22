@@ -5,9 +5,9 @@ class Product {
   final int price;
   final Color bgColor;
   final String category;
+  final String gender; 
   final List<Color> colors;
-  final List<bool> isActive; // isActive değerleri eklendi
-
+  final List<bool> isActive; 
   Product({
     required this.image,
     required this.title,
@@ -15,8 +15,9 @@ class Product {
     required this.description,
     this.bgColor = const Color(0xFFEFEFF2),
     required this.category,
+    required this.gender, 
     required this.colors,
-    required this.isActive, // isActive değerleri eklendi
+    required this.isActive, 
   });
 }
 
@@ -27,18 +28,20 @@ List<Product> demo_product = [
     price: 165,
     description: "Comfortable long sleeve shirts",
     bgColor: const Color(0xFFFEFBF9),
-    category: "shirt",
-    colors: [Color(0xFFBEE8EA), Color(0xFF141B4A), Color(0xFFF4E5C3)],
-    isActive: [true, false, false], // isActive değerleri eklendi
+    category: "Shirt",
+    gender: "Man",
+    colors: [const Color(0xFFBEE8EA), const Color(0xFF141B4A), const Color(0xFFF4E5C3)],
+    isActive: [true, false, false],
   ),
   Product(
     image: "assets/images/product_1.png",
     title: "Casual Henley Shirts",
     price: 99,
     description: "Casual and stylish Henley shirts",
-    category: "shirt",
-    colors: [Color(0xFFBEE8EA), Color(0xFF141B4A)],
-    isActive: [true, false], // isActive değerleri eklendi
+    category: "Shirt",
+    gender: "Man",
+    colors: [const Color(0xFFBEE8EA), const Color(0xFF141B4A)],
+    isActive: [true, false],
   ),
   Product(
     image: "assets/images/product_2.png",
@@ -46,9 +49,10 @@ List<Product> demo_product = [
     price: 180,
     description: "Trendy curved hem shirts",
     bgColor: const Color(0xFFF8FEFB),
-    category: "shirt",
-    colors: [Color(0xFFBEE8EA), Color(0xFF141B4A), Color(0xFFF4E5C3)],
-    isActive: [true, false, false], // isActive değerleri eklendi
+    category: "Shirt",
+    gender: "Man",
+    colors: [const Color(0xFFBEE8EA), const Color(0xFF141B4A), const Color(0xFFF4E5C3)],
+    isActive: [true, false, false],
   ),
   Product(
     image: "assets/images/product_3.png",
@@ -56,9 +60,10 @@ List<Product> demo_product = [
     price: 149,
     description: "Casual Nolin shirts for everyday wear",
     bgColor: const Color(0xFFEEEEED),
-    category: "shirt",
-    colors: [Color(0xFFBEE8EA), Color(0xFF141B4A)],
-    isActive: [true, false], // isActive değerleri eklendi
+    category: "Shirt",
+    gender: "Man",
+    colors: [const Color(0xFFBEE8EA), const Color(0xFF141B4A)],
+    isActive: [true, false],
   ),
   Product(
     image: "assets/images/product_4.png",
@@ -66,9 +71,10 @@ List<Product> demo_product = [
     price: 120,
     description: "Light and breezy summer dress",
     bgColor: const Color(0xFFF8E1E1),
-    category: "dress",
-    colors: [Color(0xFFBEE8EA), Color(0xFF141B4A), Color(0xFFF4E5C3)],
-    isActive: [true, false, false], // isActive değerleri eklendi
+    category: "Dress",
+    gender: "Woman",
+    colors: [const Color(0xFFBEE8EA), const Color(0xFF141B4A), const Color(0xFFF4E5C3)],
+    isActive: [true, false, false],
   ),
   Product(
     image: "assets/images/product_5.png",
@@ -76,9 +82,10 @@ List<Product> demo_product = [
     price: 200,
     description: "Elegant formal pants",
     bgColor: const Color(0xFFE1F8E1),
-    category: "pants",
-    colors: [Color(0xFFBEE8EA), Color(0xFF141B4A)],
-    isActive: [true, false], // isActive değerleri eklendi
+    category: "Pants",
+    gender: "Man",
+    colors: [const Color(0xFFBEE8EA), const Color(0xFF141B4A)],
+    isActive: [true, false],
   ),
   Product(
     image: "assets/images/product_6.png",
@@ -86,8 +93,9 @@ List<Product> demo_product = [
     price: 80,
     description: "Comfortable casual t-shirt",
     bgColor: const Color(0xFFE1E1F8),
-    category: "tshirt",
-    colors: [Color(0xFFBEE8EA), Color(0xFF141B4A), Color(0xFFF4E5C3)],
-    isActive: [true, false, false], // isActive değerleri eklendi
+    category: "Tshirt",
+    gender: "Man",
+    colors: [const Color(0xFFBEE8EA), const Color(0xFF141B4A), const Color(0xFFF4E5C3)],
+    isActive: [true, false, false],
   ),
 ];

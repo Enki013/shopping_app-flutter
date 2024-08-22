@@ -24,7 +24,7 @@ class ProfilePage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 450, // Yüksekliği artırdık
+              height: 450, 
               child: Stack(
                 children: [
                   ClipPath(
@@ -45,14 +45,14 @@ class ProfilePage extends StatelessWidget {
                   ),
                   Column(
                     mainAxisAlignment:
-                        MainAxisAlignment.center, // İçerikleri ortaladık
+                        MainAxisAlignment.center, 
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const SizedBox(height: 15), // Üstten biraz boşluk ekledik
+                      const SizedBox(height: 15), 
                       const CircleAvatar(
                         radius: 100,
                         backgroundImage: AssetImage(
-                            'assets/icons/team-1.jpg'), // Profil resmi
+                            'assets/icons/team-1.jpg'), 
                       ),
                       const SizedBox(height: 16),
                       const Text(

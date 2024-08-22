@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CheckoutScreen extends StatefulWidget {
-  const CheckoutScreen({Key? key}) : super(key: key);
+  const CheckoutScreen({super.key});
 
   @override
   _CheckoutScreenState createState() => _CheckoutScreenState();
@@ -11,14 +11,8 @@ class CheckoutScreen extends StatefulWidget {
 class _CheckoutScreenState extends State<CheckoutScreen> {
   String selectedAddress = "Home";
   Map<String, Map<String, String>> addresses = {
-    "Home": {
-      "phone": "(342) 4522019",
-      "address": "220 New York"
-    },
-    "Office": {
-      "phone": "(342) 4522019",
-      "address": "220 Montmartre, Paris"
-    }
+    "Home": {"phone": "(342) 4522019", "address": "220 New York"},
+    "Office": {"phone": "(342) 4522019", "address": "220 Montmartre, Paris"}
   };
 
   void _selectAddress(String address) {
@@ -28,8 +22,10 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
   }
 
   void _editAddress(String title) {
-    TextEditingController phoneController = TextEditingController(text: addresses[title]!["phone"]);
-    TextEditingController addressController = TextEditingController(text: addresses[title]!["address"]);
+    TextEditingController phoneController =
+        TextEditingController(text: addresses[title]!["phone"]);
+    TextEditingController addressController =
+        TextEditingController(text: addresses[title]!["address"]);
 
     showModalBottomSheet(
       context: context,

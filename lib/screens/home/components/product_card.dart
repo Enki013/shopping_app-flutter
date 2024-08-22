@@ -53,7 +53,7 @@ class ProductCard extends StatelessWidget {
                 const SizedBox(width: defaultPadding / 4),
                 Text(
                   "\$$price",
-                  style: Theme.of(context).textTheme.bodySmall ,
+                  style: Theme.of(context).textTheme.bodySmall,
                 ),
               ],
             )

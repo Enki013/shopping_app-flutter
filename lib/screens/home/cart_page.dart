@@ -26,7 +26,7 @@ class _CartPageState extends State<CartPage> {
     final cartItems = cartProvider?.cartItems ?? [];
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF9F9FD), // Arka plan rengi
+      backgroundColor: const Color(0xFFF9F9FD),
       appBar: AppBar(
         title: Center(
           child: Text("My Cart",
@@ -52,19 +52,17 @@ class _CartPageState extends State<CartPage> {
                   child: Container(
                     padding: const EdgeInsets.all(defaultPadding / 2),
                     decoration: BoxDecoration(
-                      color: Colors.white, // Ürün kartlarının arka plan rengi
-                      borderRadius: BorderRadius.circular(
-                          20), // Köşe yuvarlama değeri artırıldı
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
                     ),
                     child: Row(
                       children: [
                         Container(
-                          width: 100, // Boyut artırıldı
-                          height: 100, // Boyut artırıldı
+                          width: 100,
+                          height: 100,
                           decoration: BoxDecoration(
                             color: color,
-                            borderRadius: BorderRadius.circular(
-                                20), // Köşe yuvarlama değeri artırıldı
+                            borderRadius: BorderRadius.circular(20),
                             image: DecorationImage(
                               image: AssetImage(product.image),
                               fit: BoxFit.cover,
@@ -79,9 +77,7 @@ class _CartPageState extends State<CartPage> {
                               Text(
                                 product.title,
                                 style: const TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight
-                                        .bold), // Yazı boyutu artırıldı
+                                    fontSize: 18, fontWeight: FontWeight.bold),
                               ),
                               const SizedBox(height: 5),
                               Text(
@@ -107,19 +103,18 @@ class _CartPageState extends State<CartPage> {
                               onPressed: () {
                                 cartProvider?.decrementQuantity(product, color);
                               },
-                              icon: Icon(Icons.remove_circle_outline,
+                              icon: const Icon(Icons.remove_circle_outline,
                                   color: primaryColor),
                             ),
                             Text(
                               "$quantity",
-                              style: const TextStyle(
-                                  fontSize: 18), // Yazı boyutu büyütüldü
+                              style: const TextStyle(fontSize: 18),
                             ),
                             IconButton(
                               onPressed: () {
                                 cartProvider?.incrementQuantity(product, color);
                               },
-                              icon: Icon(Icons.add_circle_outline,
+                              icon: const Icon(Icons.add_circle_outline,
                                   color: primaryColor),
                             ),
                           ],
@@ -156,7 +151,8 @@ class _CartPageState extends State<CartPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const CheckoutScreen()),
+                    MaterialPageRoute(
+                        builder: (context) => const CheckoutScreen()),
                   );
                 },
                 style: ElevatedButton.styleFrom(
